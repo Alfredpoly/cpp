@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/24 15:05:29 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/25 15:34:53 by fpolycar      ########   odam.nl         */
+/*   Updated: 2022/10/27 15:13:48 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,31 @@ void	impossible(void)
 	std::cout << "int: impossible" << std::endl;
 }
 
+bool validation(std::string buff)
+{
+	char last_char = buff.back();
+
+	for (int i = 0; i < buff.length() - 1; i++) {
+     	if(isalpha(buff[i]))
+			return false;
+	}
+	if ((buff.length() > 1 && !(last_char == 'f' || last_char == 'F')) && !isdigit(last_char))
+		return false;
+	return true;
+} 
+
 int main(int argc, char **argv)
 {
+	if (argc == 1)
+	{
+		std::cerr << "No input detected." << std::endl;
+		return (1);
+	}
 	std::string buff = argv[1];
-
-	if (argc < 2 || argc > 2)
+	if (argc !=2 || !validation(buff))
 	{
 		std::cerr << "Wrong input detected. Can only convert one scalar type at a time." << std::endl;
-		return (0);
+		return (1);
 	}
 	if (buff == "nan" || buff == "-inf" || buff == "+inf")
 	{
@@ -42,4 +59,5 @@ int main(int argc, char **argv)
 		return 0;
 	}
 	Convert convert(buff);
+	std::cout << convert.getCharString() << convert.getIntString() << convert.getFloatString() << convert.getDoubleString();
 }

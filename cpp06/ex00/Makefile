@@ -10,7 +10,7 @@ PATHS = src/
 
 
 src = src/main.cpp \
-		src/Convert.cpp \
+		src/Convert.cpp 
 		
 		
 HEADERS = src/Convert.hpp \

@@ -9,11 +9,10 @@ PATHO = build/objs/
 PATHS = src/
 
 
-src = src/main.cpp \
-		src/Span.cpp
+src = src/main.cpp
 
 
-HEADERS = src/Span.hpp
+HEADERS = src/MutantStack.hpp
 
 OBJS	=	$(addprefix $(PATHO), $(notdir $(patsubst %.cpp, %.o, $(src))))
 

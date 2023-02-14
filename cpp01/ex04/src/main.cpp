@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 11:20:37 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/11 13:28:08 by fpolycar      ########   odam.nl         */
+/*   Updated: 2022/12/02 13:31:49 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ int main()
 	{
 		while (std::getline(infile, filecontent))
 		{
-			while (filecontent.find(s1, found) != std::string::npos)
+			while (filecontent.find(s1) != std::string::npos)
 			{
-				found = filecontent.find(s1, found);
+				found = filecontent.find(s1);
 				filecontent.erase(found, s1.length());
 				filecontent.insert(found, s2);
 			}

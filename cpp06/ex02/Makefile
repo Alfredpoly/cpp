@@ -1,4 +1,4 @@
-NAME = megaphone
+NAME = serialize
 CC = g++
 FLAGS = -Wall -Wextra -Werror
 MKDIR = mkdir
@@ -9,7 +9,14 @@ PATHO = build/objs/
 PATHS = src/
 
 
-src = src/ex00.cpp
+src = src/main.cpp \
+		src/serialization.cpp \
+		src/Data.cpp 
+		
+		
+HEADERS = src/Data.hpp \
+			src/Data.hpp
+
 OBJS	=	$(addprefix $(PATHO), $(notdir $(patsubst %.cpp, %.o, $(src))))
 
 all: $(BUILD_PATHS) $(NAME)
@@ -18,8 +25,8 @@ $(PATHO)%.o:: $(PATHS)%.cpp
 	@echo "Compiling ${notdir $<}"
 	@$(CC) -c $< -o $@
 
-$(NAME): $(LIBFT) $(OBJS)
-	@$(CC) $(FLAGS) $(LIBFT) $(MLX42) $(OBJS) -o $(NAME)
+$(NAME): $(OBJS) $(HEADERS)
+	@$(CC) $(FLAGS) $(OBJS) -o $(NAME) 
 	@echo "Success"
 
 $(PATHB):
@@ -31,7 +38,7 @@ $(PATHO):
 clean:
 	@echo "Cleaning"
 	@rm -f $(OBJS)
-	@rm -rf $(PATHO) $(PATHB)
+	@rmdir $(PATHO) $(PATHB)
 
 fclean: clean
 	@rm -f $(NAME)

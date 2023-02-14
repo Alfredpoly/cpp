@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/26 12:02:24 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/04 13:45:55 by fpolycar      ########   odam.nl         */
+/*   Updated: 2022/11/03 12:02:39 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ Phonebook::Phonebook() : max_contact(8)
 {
 	this->nb_contact = 0;
 }
+
+Phonebook::~Phonebook(){}
 
 void	Phonebook::add_contact()
 {
@@ -43,10 +45,10 @@ void	Phonebook::search_contact()
 	}
 	std::cout << "Enter an index to view the full contact:" << std::endl;
 	std::cin >> buff;
+	if (std::cin.eof())
+        exit(0);
 	if (std::isdigit(buff[0]) == 0 || buff.length() > 1)
-	{
 		std::cout << "Index out of range (0-7) or not a digit" << std::endl;
-	}
 	else if (std::stoi(buff) > 7 || std::stoi(buff) < 0 )
 		std::cout << "Index out of range (0-7)" << std::endl;
 	else

@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 12:59:43 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/06 11:28:31 by fpolycar      ########   odam.nl         */
+/*   Updated: 2022/12/02 12:01:40 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,13 @@ private:
 	std::string _name;
  
 public: 
-// Constructor 
 	Zombie(); 
 	Zombie( const Zombie &rhs); 
 	Zombie(std::string newName);
 	~Zombie(); 
 	Zombie& operator=( const Zombie &rhs); 
-// Getters 
-	std::string getName(); 
-// Setters 
+	std::string getName();
 	void setName(std::string _name); 
-// Output 
 	void announce( void );
 	void output();
 }; 

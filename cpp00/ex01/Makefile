@@ -1,4 +1,4 @@
-NAME = megaphone
+NAME = phonebook
 CC = g++
 FLAGS = -Wall -Wextra -Werror
 MKDIR = mkdir
@@ -9,7 +9,13 @@ PATHO = build/objs/
 PATHS = src/
 
 
-src = src/ex00.cpp
+src = src/main.cpp \
+		src/Contact.cpp \
+		src/Phonebook.cpp 
+
+HEADERS = src/Contact.hpp \
+			src/Phonebook.hpp
+
 OBJS	=	$(addprefix $(PATHO), $(notdir $(patsubst %.cpp, %.o, $(src))))
 
 all: $(BUILD_PATHS) $(NAME)
@@ -18,8 +24,8 @@ $(PATHO)%.o:: $(PATHS)%.cpp
 	@echo "Compiling ${notdir $<}"
 	@$(CC) -c $< -o $@
 
-$(NAME): $(LIBFT) $(OBJS)
-	@$(CC) $(FLAGS) $(LIBFT) $(MLX42) $(OBJS) -o $(NAME)
+$(NAME): $(OBJS) $(HEADERS)
+	@$(CC) $(FLAGS) $(OBJS) -o $(NAME) 
 	@echo "Success"
 
 $(PATHB):

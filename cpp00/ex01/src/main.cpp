@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/06 15:49:55 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/04 13:30:13 by fpolycar      ########   odam.nl         */
+/*   Updated: 2022/11/03 11:38:35 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int main(int argc, char **argv)
     while(1)
     {
 	    std::cin >> buff;
+        if (std::cin.eof())
+            break;
         if (add == buff)
             p.add_contact();
         if (search == buff)

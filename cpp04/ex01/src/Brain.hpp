@@ -11,6 +11,8 @@ private:
  
 public: 
 	Brain();
+	Brain( const Brain& rhs);
+	Brain &operator=( const Brain& rhs);
 	~Brain();
 }; 
  

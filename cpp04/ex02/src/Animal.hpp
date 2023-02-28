@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:17:32 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/18 14:02:43 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/28 13:06:50 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,16 @@ class Animal
 {
 protected: 
 	std::string _type;
-	Animal();
-	Animal(std::string newType);
  
 public:
+	Animal();
+	Animal(const Animal& rhs);
+	Animal(std::string newType);
 	virtual ~Animal();
 	Animal& operator=( const Animal &rhs);
 	std::string getType() const;
 	void setType(std::string _type);
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0;
 }; 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:17:13 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/18 11:15:24 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/27 09:51:33 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class WrongCat : public WrongAnimal
 {
 public: 
 	WrongCat();
+	WrongCat( const WrongCat& rhs);
+	WrongCat &operator=( const WrongCat& rhs);
 	~WrongCat();
 	void makeSound() const;
 }; 

@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:17:03 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/18 11:30:36 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/27 10:35:08 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,19 @@ WrongCat::WrongCat() : WrongAnimal("WrongCat")
 	std::cout << "WrongCat has been constructed" << std::endl;
 
 }
- 
+
+WrongCat::WrongCat( const WrongCat& rhs) : WrongAnimal(rhs.getType())
+{
+	std::cout << "WrongCat has been copied" << std::endl;
+}
+
+WrongCat& WrongCat::operator=( const WrongCat& rhs)
+{
+	WrongAnimal(rhs.getType());
+	std::cout << "WrongCat has been coppied through assignment" << std::endl;
+	return *this;
+}
+
 WrongCat::~WrongCat()
 {
 	std::cout << "WrongCat has been destroyed" << std::endl;

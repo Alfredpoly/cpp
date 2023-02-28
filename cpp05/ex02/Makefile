@@ -15,7 +15,6 @@ src = src/main.cpp \
 		src/PresidentialPardonForm.cpp \
 		src/RobotomyRequestForm.cpp \
 		src/ShrubberyCreationForm.cpp \
-		src/Intern.cpp \
 
 
 
@@ -24,8 +23,7 @@ HEADERS = src/Bureaucrat.hpp \
 			src/color.hpp \
 			src/PresidentialPardonForm.hpp \
 			src/RobotomyRequestForm.hpp \
-			src/ShrubberyCreationForm.hpp\
-			src/Intern.hpp\
+			src/ShrubberyCreationForm.hpp
 
 OBJS	=	$(addprefix $(PATHO), $(notdir $(patsubst %.cpp, %.o, $(src))))
 

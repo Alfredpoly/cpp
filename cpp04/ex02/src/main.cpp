@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 15:39:47 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/18 14:02:30 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/28 13:08:18 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
 	// const Animal* meta = new Animal();
 	const Animal* doggo = new Dog();
 	const Animal* kitty = new Cat();
-	delete doggo;//should not create a leak
+	delete doggo;
 	delete kitty;
 	const Animal* aBunch[4];
 	int i;
@@ -34,6 +34,5 @@ int main()
 	{
 		delete(aBunch[i]);
 	}
-	system("leaks animal");
 	return 0;
 }

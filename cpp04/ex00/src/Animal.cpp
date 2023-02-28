@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:17:35 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/18 11:28:05 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/27 09:46:35 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ Animal::Animal()
 	std::cout << "Default Animal has been constructed" << std::endl;
 }
  
-Animal::Animal( const Animal& rhs)
+Animal::Animal( const Animal& rhs) : _type(rhs._type)
 {
-	*this = rhs;
+	std::cout << "Animal has been copied" << std::endl;
 }
  
 Animal::Animal(std::string newType) 
@@ -37,6 +37,7 @@ Animal::~Animal()
 
 Animal&	Animal::operator=( const Animal& rhs )
 {
+	_type = rhs._type;
 	return *this;
 }
 

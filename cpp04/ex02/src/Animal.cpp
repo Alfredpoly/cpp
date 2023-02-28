@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:17:35 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/18 14:02:46 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/27 11:12:46 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ Animal::Animal()
 	: _type("default")
 {
 	std::cout << "Default Animal has been constructed" << std::endl;
+}
+ 
+Animal::Animal( const Animal& rhs) : _type(rhs._type)
+{
+	std::cout << "Animal has been copied" << std::endl;
 }
  
 Animal::Animal(std::string newType) 

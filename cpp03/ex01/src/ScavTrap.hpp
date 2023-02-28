@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 14:04:33 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/17 14:52:32 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/24 11:03:59 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class ScavTrap : public ClapTrap
 public:
 	ScavTrap(std::string name);
 	~ScavTrap();
+	ScavTrap( const ScavTrap &rhs); 
+	ScavTrap& operator=( const ScavTrap &rhs);
 	void attack(const std::string& target);
 	void guardGate();
 }; 

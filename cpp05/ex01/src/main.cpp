@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 14:20:54 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/20 14:53:43 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/28 13:29:24 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,20 +57,21 @@ int main(void)
 	std::cout << std::endl << GREEN << "--------------[ Lets sign some forms! ]--------------" << RESET_COLOR << std::endl << std::endl;
 	Bureaucrat Henry("Henry", 140), Bob("Bob", 2), George("George", 75);
 
-	std::cout << std::endl << BLUE << "--------------[ HOUSING PERMIT (5, 23) ]--------------" << RESET_COLOR << std::endl << std::endl;
-	Form housingPermit("Housing Permit", 5, 23);
+	std::cout << std::endl << BLUE << "--------------[ Form1 (5, 23) ]--------------" << RESET_COLOR << std::endl << std::endl;
+	Form Form1("Form1", 5, 23);
 
 	std::cout << std::endl << MAGENTA << "--------------[ vv Signing vv ]--------------" << RESET_COLOR << std::endl << std::endl;
-	Henry.signForm(housingPermit);
-	Bob.signForm(housingPermit);
+	Henry.signForm(Form1);
+	George.signForm(Form1);
+	Bob.signForm(Form1);
 	
 	
-	std::cout << std::endl << BLUE << "--------------[ BILLIONARE ELEGIBILITY FORM (80, 3) ]--------------" << RESET_COLOR << std::endl << std::endl;
-	Form billionareElegibilityForm("Billionare Elegibility Form", 80, 3);
+	std::cout << std::endl << BLUE << "--------------[ Form2 (80, 3) ]--------------" << RESET_COLOR << std::endl << std::endl;
+	Form Form2("Form2", 80, 3);
 	std::cout << std::endl << MAGENTA << "--------------[ vv Signing vv ]--------------" << RESET_COLOR << std::endl << std::endl;
-	Henry.signForm(billionareElegibilityForm);
-	George.signForm(billionareElegibilityForm);
-	Bob.signForm(billionareElegibilityForm);
+	Henry.signForm(Form2);
+	George.signForm(Form2);
+	Bob.signForm(Form2);
 	std::cout << std::endl << GREEN << "--------------[ DESTRUCT ]--------------" << RESET_COLOR << std::endl << std::endl;
 	return (0) ;
 }

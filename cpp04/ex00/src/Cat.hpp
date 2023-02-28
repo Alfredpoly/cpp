@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:17:13 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/17 16:22:36 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/27 09:47:56 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Cat : public Animal
 {
 public: 
 	Cat();
+	Cat( const Cat& rhs);
+	Cat &operator=( const Cat& rhs);
 	~Cat();
 	void makeSound() const;
 }; 

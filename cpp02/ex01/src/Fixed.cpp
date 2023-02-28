@@ -45,8 +45,9 @@ void Fixed::setRawBits( int const raw )
 	this->_fixed = raw;
 }
 
-Fixed::Fixed( const Fixed& rhs) : _fixed(rhs._fixed)
+Fixed::Fixed( const Fixed& rhs)
 {
+	this->_fixed = rhs._fixed;
 	std::cout << "Copy constructor called" << std::endl;
 	*this = rhs;
 }

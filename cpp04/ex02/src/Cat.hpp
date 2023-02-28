@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:17:13 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/18 12:47:09 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/27 11:53:25 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ private:
 	Brain *Brain;
 public: 
 	Cat();
+	Cat( const Cat& rhs);
+	Cat &operator=( const Cat& rhs);
 	~Cat();
 	void makeSound() const;
 }; 

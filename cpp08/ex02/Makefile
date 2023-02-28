@@ -1,4 +1,4 @@
-NAME = easyfind
+NAME = stack
 CC = g++
 FLAGS = -Wall -Wextra -Werror 
 MKDIR = mkdir

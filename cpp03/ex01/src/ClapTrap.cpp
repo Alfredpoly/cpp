@@ -6,18 +6,18 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 11:30:43 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/17 15:15:54 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/02/27 13:41:39 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name)
-	: _name(name), _hit(100), _energy(100), _attack(30)
+	: _name(name), _hit(10), _energy(10), _attack(0)
 {
 	std::cout << "ClapTrap " << name << " has been constructed." << std::endl;
 }
- 
+
 ClapTrap::ClapTrap( const ClapTrap& rhs)
 {
 	*this = rhs;
@@ -55,7 +55,7 @@ void ClapTrap::attack(const std::string& target)
 	else
 	{
 		_energy--;
-		std::cout << "ClapTrap " << _name << " attacks " << target << " causing " << _attack << " points of damage!"<< std::endl;	
+		std::cout  << _name << " attacks " << target << " causing " << _attack << " points of damage!"<< std::endl;	
 	}
 }
 
@@ -74,7 +74,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	else
 	{
 		_hit -= amount;
-		std::cout << "ClapTrap " << _name << " took " << amount << " of damage and has now " << _hit << "points of life" << std::endl;
+		std::cout  << _name << " took " << amount << " of damage and has now " << _hit << "points of life" << std::endl;
 	}
 }
 
@@ -89,7 +89,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << _name << " doesn't have any energy" << std::endl;
 	else
 	{
+		_energy--;
 		_hit += amount;
-		std::cout << "ClapTrap " << _name << " gain " << amount << " of health, and now has " << _hit << " points of health" << std::endl;
+		std::cout << _name << " gain " << amount << " of health, and now has " << _hit << " points of health" << std::endl;
 	}
 }

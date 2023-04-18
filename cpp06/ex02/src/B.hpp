@@ -2,6 +2,8 @@
 #define B_H
 #include <iostream>
 #include <string>
+#include "Base.hpp"
+
  
 // Class definition 
 class B	: public Base

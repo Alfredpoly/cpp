@@ -19,13 +19,13 @@ Convert::Convert(std::string buff)
 void Convert::convertToChar()
 {	
 	if (_intValue > 127 || _intValue < 0)
-		_retChar = "char: impossible\n";
+		_retChar = "impossible";
 	else if ((_intValue <= 32 && _intValue >= 0) || _intValue == 127)
-		_retChar = "char: Non displayable\n";
+		_retChar = "Non displayable";
 	else
 	{
 		_charValue = static_cast<char>(_intValue);
-		_retChar = "Char: " + std::to_string(_charValue) + "\n";
+		_retChar = _charValue;
 	}
 }
 

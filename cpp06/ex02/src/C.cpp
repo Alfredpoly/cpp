@@ -1,7 +1,6 @@
 #include "C.hpp"
-// Constructor initializes attributes to 0 by default 
+
 C::C()
-	: 
 {
 
 }

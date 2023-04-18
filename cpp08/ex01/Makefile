@@ -1,4 +1,4 @@
-NAME = stack
+NAME = span
 CC = g++
 FLAGS = -Wall -Wextra -Werror 
 MKDIR = mkdir

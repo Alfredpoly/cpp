@@ -1,4 +1,4 @@
-NAME = serialize
+NAME = identify
 CC = g++
 FLAGS = -Wall -Wextra -Werror
 MKDIR = mkdir
@@ -10,12 +10,16 @@ PATHS = src/
 
 
 src = src/main.cpp \
-		src/serialization.cpp \
-		src/Data.cpp 
+		src/Base.cpp \
+		src/A.cpp \
+		src/B.cpp \
+		src/C.cpp 
 		
 		
-HEADERS = src/Data.hpp \
-			src/Data.hpp
+HEADERS = src/A.hpp \
+			src/B.hpp \
+			src/C.hpp \
+			src/Base.hpp
 
 OBJS	=	$(addprefix $(PATHO), $(notdir $(patsubst %.cpp, %.o, $(src))))
 

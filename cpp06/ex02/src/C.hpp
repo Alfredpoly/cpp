@@ -2,6 +2,8 @@
 #define C_H
 #include <iostream>
 #include <string>
+#include "Base.hpp"
+
  
 // Class definition 
 class C : public Base

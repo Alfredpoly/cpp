@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 15:39:47 by fpolycar      #+#    #+#                 */
-/*   Updated: 2023/02/28 12:48:05 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/03/03 13:31:09 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,17 @@ int main()
 	const Animal* kitty = new Cat();
 	delete doggo;
 	delete kitty;
-	const Animal* aBunch[4];
+	const Animal* animals[4];
 	for (int i = 0; i < 4; i++)
 	{
 		if (i < 2)
-			aBunch[i] = new Dog();
+			animals[i] = new Dog();
 		else
-			aBunch[i] = new Cat();
+			animals[i] = new Cat();
 	}
 	for (int i = 0; i < 4; i++)
 	{
-		delete(aBunch[i]);
+		delete(animals[i]);
 	}
 	return 0;
 }

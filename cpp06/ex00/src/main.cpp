@@ -6,7 +6,7 @@
 /*   By: fpolycar <fpolycar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/24 15:05:29 by fpolycar      #+#    #+#                 */
-/*   Updated: 2022/10/27 15:13:48 by fpolycar      ########   odam.nl         */
+/*   Updated: 2023/03/07 12:03:58 by fpolycar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,25 +39,25 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	std::string buff = argv[1];
-	if (argc !=2 || !validation(buff))
-	{
-		std::cerr << "Wrong input detected. Can only convert one scalar type at a time." << std::endl;
-		return (1);
-	}
-	if (buff == "nan" || buff == "-inf" || buff == "+inf")
+	if ((buff == "nan" || buff == "-inf" || buff == "+inf") && argc ==2)
 	{
 		impossible();
 		std::cout << "float: " << buff << "f" << std::endl;
 		std::cout << "double: " << buff << std::endl;
 		return 0;
 	}
-	if (buff == "nanf" || buff == "-inff" || buff == "+inff")
+	if ((buff == "nanf" || buff == "-inff" || buff == "+inff") && argc ==2)
 	{
 		impossible();
 		std::cout << "float: " << buff << std::endl;
 		std::cout << "double: " << buff.substr(0, buff.length() - 1) << std::endl;
 		return 0;
 	}
+	if (argc !=2 || !validation(buff))
+	{
+		std::cerr << "Wrong input detected. Can only convert one scalar type at a time." << std::endl;
+		return (1);
+	}
 	Convert convert(buff);
-	std::cout << convert.getCharString() << convert.getIntString() << convert.getFloatString() << convert.getDoubleString();
+	std::cout << "char: " << convert.getCharString() << "\n" << convert.getIntString() << convert.getFloatString() << convert.getDoubleString();
 }

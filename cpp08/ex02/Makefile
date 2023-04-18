@@ -1,4 +1,4 @@
-NAME = stack
+NAME = mutantstack
 CC = g++
 FLAGS = -Wall -Wextra -Werror 
 MKDIR = mkdir

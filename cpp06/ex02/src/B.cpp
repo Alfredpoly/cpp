@@ -1,7 +1,6 @@
 #include "B.hpp"
-// Constructor initializes attributes to 0 by default 
+
 B::B()
-	: 
 {
 
 }

@@ -8,27 +8,26 @@ int main(int argc, char **argv)
         return 1;
     }
     else {
-        clock_t start_v, end_v, total_v, start_l, end_l, total_l;
+        std::chrono::steady_clock::time_point start_v, end_v, start_l, end_l;
+        std::chrono::microseconds total_v, total_l;
 
         PmergeMe pmerge;
-        start_v = clock();
+        start_v = std::chrono::steady_clock::now();
         pmerge.sortWithVector(argv);
-        end_v = clock();
-        total_v = end_v - start_v;
-        start_l = clock();
+        end_v = std::chrono::steady_clock::now();
+        total_v = std::chrono::duration_cast<std::chrono::microseconds>(end_v - start_v);
+        start_l = std::chrono::steady_clock::now();
         pmerge.sortWithList(argv);
-        end_l = clock();
-        total_l = end_l - start_l;
+        end_l = std::chrono::steady_clock::now();
+        total_l = std::chrono::duration_cast<std::chrono::microseconds>(end_l - start_l);
         std::cout << "Before : ";
         for (int i = 1; i < argc; i++)
             std::cout << argv[i] << " ";
         std::cout << std::endl;
-        std::cout << "After : ";
-        for (std::vector<int>::iterator it = pmerge.getVec().begin(); it != pmerge.getVec().end(); it++)
-            std::cout << *it << " ";
-        std::cout << std::endl;
-        std::cout << "Time to process a range of " << argc - 1 << " elements with std::vector : " << std::fixed << total_v << std::setprecision(5) << " us" << std::endl;
-        std::cout << "Time to process a range of " << argc - 1 << " elements with std::list : " << std::fixed << total_l << std::setprecision(5) << " us" << std::endl;
+        pmerge.printVector();
+        pmerge.printList();
+        std::cout << "Time to process a range of " << argc - 1 << " elements with std::vector : " << total_v.count() << " us" << std::endl;
+        std::cout << "Time to process a range of " << argc - 1 << " elements with std::list : " << total_l.count() << " us" << std::endl;
     }
 
     return 0;

@@ -8,7 +8,6 @@
 }</component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="cpp" targetName="build" />
       <config projectName="cpp" targetName="fclean" />
       <config projectName="cpp" targetName="RPN" />
       <config projectName="cpp" targetName="all" />
@@ -22,19 +21,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2a9e881-d2c2-4b2f-a9c0-778ed9a91513" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cpp09/ex00/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex00/src/BitcoinExchange.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex00/src/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex00/src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex01/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex01/src/RPN.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex01/src/RPN.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex01/src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex02/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex02/src/PmergeMe.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex02/src/PmergeMe.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cpp09/ex02/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp09/ex01/RPN" beforeDir="false" afterPath="$PROJECT_DIR$/cpp09/ex01/RPN" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp09/ex01/build/objs/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/cpp09/ex01/build/objs/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp09/ex01/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp09/ex01/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp09/ex02/PmergeMe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp09/ex02/build/objs/PmergeMe.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp09/ex02/build/objs/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp09/ex02/src/PmergeMe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp09/ex02/src/PmergeMe.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp09/ex02/src/PmergeMe.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp09/ex02/src/PmergeMe.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp09/ex02/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp09/ex02/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,24 +89,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/fpolycar/Documents/codam/in_progress/cpp/cpp09",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/fpolycar/Documents/codam/in_progress/cpp/cpp09&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cpp09" />
@@ -125,22 +121,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Makefile Application.all">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RPN" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="RPN" CONFIG_NAME="RPN" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="all" CONFIG_NAME="all" version="1">
-      <method v="2">
-        <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="build" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp" TARGET_NAME="build" CONFIG_NAME="build" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -157,7 +143,6 @@
     </configuration>
     <list>
       <item itemvalue="Makefile Application.all" />
-      <item itemvalue="Makefile Application.build" />
       <item itemvalue="Makefile Application.fclean" />
       <item itemvalue="Makefile Application.re" />
       <item itemvalue="Makefile Application.RPN" />
@@ -178,7 +163,8 @@
       <workItem from="1681808712578" duration="1053000" />
       <workItem from="1684231678608" duration="2100000" />
       <workItem from="1684309561933" duration="7000" />
-      <workItem from="1685002084117" duration="17643000" />
+      <workItem from="1685002084117" duration="17740000" />
+      <workItem from="1685088522534" duration="3030000" />
     </task>
     <task id="LOCAL-00001" summary="back at it">
       <created>1676379820202</created>
@@ -187,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676379820202</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cpp09">
+      <created>1685022748129</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685022748129</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cpp09">
+      <created>1685022791723</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685022791723</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +195,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="back at it" />
-    <option name="LAST_COMMIT_MESSAGE" value="back at it" />
+    <MESSAGE value="cpp09" />
+    <option name="LAST_COMMIT_MESSAGE" value="cpp09" />
   </component>
 </project>
